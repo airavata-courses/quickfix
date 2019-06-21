@@ -11,13 +11,16 @@
 <style>
 
 .header {
-text-align: center;background: red;
+text-align: center;
+background: red;
+font-size: 20px
     }
 
-body {
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-      }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: linen
+    }
 
 .topnav {
 overflow: hidden;
@@ -45,13 +48,22 @@ color: white;
 </style>
 
 <body>
-<div class="topnav">
-<a class="active" href="QuickFix.html">Find Remodeling Company</a>
-<a href="postyourcompany.html">Post Your Company</a>
-<a href="findemployer.html">Find Employer</a>
-<a href="#faq">FAQ's</a>
-<a href="signup.html">Sign Up</a>
-</div>
+    <div class="topnav">
+        <a class="active" href="QuickFix.html">Find Remodeling Company</a>
+        <a href="postyourcompany.html">Post Your Company</a>
+        <a href="findemployer.html">Find Employer</a>
+        <a href="#faq">FAQ's</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <form action=" /skill_page.php">
+        <input type="text" placeholder="Search.."><br> 
+        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+        <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+        <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br><br>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 
 </html>
