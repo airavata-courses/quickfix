@@ -35,23 +35,24 @@ def csv_tech():
       joblist.append(job_dict.get('date'))
       #This for loop spilts the information of each job into its own index in the list
 
-    filename = 'Data.csv'
-    #The csv file name that will be used
-    mycsv = csv.writer(open(filename, 'w'))
-    #Create the csv file 
-    header = ['Salary', 'Description', 'Title', 'Url', 'Company', 'Locations','Site', 'Date']
-    mycsv.writerow(header)
-    #Write the header row into the csv before writing in the data
-    i = 0
-    #i is used for indexing the list 
-    for row in range(len(joblist)):
-        row = i
-        mycsv.writerow(joblist[row:i+8])
-        i += 8
-        #This for loop is used to put the information of each job into one row 
-        #This is because that way each job has its own row of information
+    
+    with open('./module/Data.csv', 'wb') as f:
+      #The csv file name that will be used
+      mycsv = csv.writer(f)
+      #Create the csv file 
+      header = ['Salary', 'Description', 'Title', 'Url', 'Company', 'Locations','Site', 'Date']
+      mycsv.writerow(header)
+      #Write the header row into the csv before writing in the data
+      i = 0
+      #i is used for indexing the list 
+      for row in range(len(joblist)):
+          row = i
+          mycsv.writerow(joblist[row:i+8])
+          i += 8
+          #This for loop is used to put the information of each job into one row 
+          #This is because that way each job has its own row of information
 
   except:
     print 'Failure!'
   
-  return './module/'+filename
+  return './module/Data.csv'
