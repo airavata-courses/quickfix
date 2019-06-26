@@ -5,7 +5,6 @@ def csv_tech():
   try:
     cj  =  CareerjetAPIClient("en_US") 
     #This tells the api what country to look for
-
     result_json = cj.search({
                             'location'    : 'USA',
                             'keywords'    : 'remodeling',
@@ -33,32 +32,16 @@ def csv_tech():
       joblist.append(job_dict.get('locations'))
       joblist.append(job_dict.get('site'))
       joblist.append(job_dict.get('date'))
+    j = 8
+    k = 0
+    usable_list = []
+    for n in range(len(joblist)):
+      if(joblist[j-1] != ''):
+        usable_list.append(joblist[k:j])
+        k = j
+        j += 8
       #This for loop spilts the information of each job into its own index in the list
-
-    
-    '''#with open('./module/Data.csv', 'wb') as f:
-      #The csv file name that will be used
-      #mycsv = csv.writer(f)
-      #Create the csv file 
-      #header = ['Salary', 'Description', 'Title', 'Url', 'Company', 'Locations','Site', 'Date']
-      #mycsv.writerow(header)
-      #Write the header row into the csv before writing in the data
-      #i = 0
-      #i is used for indexing the list 
-      for row in range(len(joblist)):
-          row = i
-          mycsv.writerow(joblist[row:i+8])
-          i += 8
-          #This for loop is used to put the information of each job into one row 
-          #This is because that way each job has its own row of information
-    with open('./module/Data.csv') as in_file:
-        with open('./module/Data.csv', 'w') as out_file:
-            writer = csv.writer(out_file)
-            for row in csv.reader(in_file):
-                if row:
-                    writer.writerow(row)'''
-
   except:
     print 'Failure!'
-  
-  return joblist
+
+  return usable_list

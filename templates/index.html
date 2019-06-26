@@ -4,21 +4,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home Remodeling Search</title>
 <link rel="stylesheet" href="../static/GreatPage.css">
+<style type="text/css">
+table{
+  width: 100%;
+}
+th:tr{ 
+      color: blue; 
+
+  } 
+tr:nth-of-type(2n){ 
+  border: 1px solid black; 
+  background-color: rgba(150, 150, 150, 0.5); 
+
+  } 
+td{   
+  height: 50px;
+  padding: 8px 8px; 
+  border: 1px solid black; 
+} 
+</style> 
 </head>
 <body class ="bodyi">
 <div class="topnav">
   <a class="active" href="#home">Find Remodeling Company</a>
   <a href="static/Postyourcompany.html">Post Your Company</a>
   <a href="static/FindEmployer.html">Post Your Skills</a>
-  <a href="static/jobs.html">Find Jobs</a>
 </div>
 <div class="containeri">
-  <img src="static/remodeling-plan.jpg" alt="Snow" style="width: 1260px; height: 600px; overflow: hidden; ">
+  <img src="static/remodeling-plan.jpg" alt="Snow" style="width: 100%; height: 450px; overflow: hidden;">
   <div class="centeredi">Get the right company. Find the best rates, find the best service, and find the best employees
 
   </div>
   </div>
 </div>
-
+<table>
+  <tr>
+    <th>Job Number</th>
+    <th>Job Information</th>
+  </tr>
+  {%for i in range(0, len)%}
+  <tr>
+    <td>{{i}}</td>
+    <td> {{results[i]}} </td>
+  </tr>
+  {%endfor%}
+</table>
 </body>
 </html> 
