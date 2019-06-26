@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link rel='stylesheet' href='../static/GreatPage.css'>
+  <title>Company Register</title>
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+  <div class='topnav'>
+      <a href='index.html'>Find Remodeling Company</a>
+      <a class='active' href='Postyourcompany.html'>Post Your Company</a>
+      <a href='FindEmployer.html'>Post Your Skills</a>
+      <a href='jobs.html'>Find Jobs</a>
+  </div>
+   <h1>Register:</h1>
+  <div>
+    <form action='process.html' method='post'>
+      <label for='Company Name'>Company Name</label>
+      <input type='text' id='name' name='name' placeholder='Company Name'>
+
+      <label for='Salary'>Salary</label>
+      <input type='text' id='salary' name='salary' placeholder='Salary'>
+
+      <label for='Job Description'>Job Description</label>
+      <input type='text' id='description' name='description' placeholder='Job Description'>
+
+      <label for='title'>Job Title</label>
+      <input type='text' id='title' name='title' placeholder='Title'>
+
+      <label for='url'>Job URL</label>
+      <input type='text' id='URL' name='url' placeholder='URL'>
+
+      <label for='Site'>Job site</label>
+      <input type='text' id='Site' name='site' placeholder='Leave Blank'>
+
+      <label for='location'>Job location</label>
+      <input type='text' id='Location' name='location' placeholder='Locaiton'>
+
+      <label for='data'>Todays Date</label>
+      <input type='text' id='date' name='date' placeholder='todays date'>
+
+      <input type='submit' name='submit' id='submit' class='button' value='Submit'/>
+    </form>
+  </div>
+  </body>
+  </html>
