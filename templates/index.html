@@ -37,17 +37,33 @@ td{
   </div>
   </div>
 </div>
-<table>
+<div style="height:300px;overflow:auto;">
+  <table>
   <tr>
     <th>Job Number</th>
-    <th>Job Information</th>
+    <th>Salary</th>
+    <th>Description</th>
+    <th>Title</th>
+    <th>URL</th>
+    <th>Company</th>
+    <th>locations</th>
+    <th>Site</th>
+    <th>Date</th>
   </tr>
   {%for i in range(0, len)%}
   <tr>
     <td>{{i}}</td>
     <td> {{results[i]}} </td>
+    <td> {{results2[i]}} </td>
+    <td> {{results3[i]}} </td>
+    <td> {{results4[i]}} </td>
+    <td> {{results5[i]}} </td>
+    <td> {{results6[i]}} </td>
+    <td> {{results7[i]}} </td>
+    <td> {{results8[i]}} </td>
   </tr>
   {%endfor%}
-</table>
+  </table>
+</div>
 </body>
 </html> 

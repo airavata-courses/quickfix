@@ -20,28 +20,28 @@ def csv_tech():
     #This is used to get the jobs from the results of the api cal
     dictOfWords = { i : jobs[i] for i in range(0, len(jobs))}
     #This is used to give a number for each job and its information
-    joblist = []
+    joblist1 = []
+    joblist2 = []
+    joblist3 = []
+    joblist4 = []
+    joblist5 = []
+    joblist6 = []
+    joblist7 = []
+    joblist8 = []
     #A list used to get the information of each job
     for i in range(0, len(dictOfWords)):
       job_dict = dictOfWords.get(i)
-      joblist.append(job_dict.get('salary'))
-      joblist.append(job_dict.get('description'))
-      joblist.append(job_dict.get('title'))
-      joblist.append(job_dict.get('url'))
-      joblist.append(job_dict.get('company'))
-      joblist.append(job_dict.get('locations'))
-      joblist.append(job_dict.get('site'))
-      joblist.append(job_dict.get('date'))
-    j = 8
-    k = 0
-    usable_list = []
-    for n in range(len(joblist)):
-      if(joblist[j-1] != ''):
-        usable_list.append(joblist[k:j])
-        k = j
-        j += 8
+      joblist1.append(job_dict.get('salary'))
+      if (job_dict.get('description') != ''):
+        joblist2.append(job_dict.get('description'))
+        joblist3.append(job_dict.get('title'))
+        joblist4.append(job_dict.get('url'))
+        joblist5.append(job_dict.get('company'))
+        joblist6.append(job_dict.get('locations'))
+        joblist7.append(job_dict.get('site'))
+        joblist8.append(job_dict.get('date'))
       #This for loop spilts the information of each job into its own index in the list
   except:
     print 'Failure!'
 
-  return usable_list
+  return joblist1,joblist2,joblist3,joblist4,joblist5,joblist6,joblist7,joblist8

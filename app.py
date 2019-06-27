@@ -6,11 +6,13 @@ app = Flask(__name__, template_folder='templates')
 def index():
     #return render_template('index.html', title='Home')
     try:
-        result = tech.csv_tech()
-        if result is None:
+        result1,result2,result3,result4,result5,result6,result7,result8 = tech.csv_tech()
+        if result1 is None:
             return "ERROR 404"
         else:
-            return render_template("index.html",len = len(result), results=result)
+            return render_template("index.html",len = len(result1), results=result1
+            ,results2=result2,results3=result3,results4=result4,
+            results5=result5,results6=result6,results7=result7,results8=result8)
     except:
         return "ERROR"
  
